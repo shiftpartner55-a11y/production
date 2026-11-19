@@ -1,0 +1,44 @@
+<!--
+title: Thank You – Request Received | Shiftingpartner
+description: Your Shiftingpartner relocation request has been received. Our team will contact you shortly.
+path: thank-you
+robots: noindex, nofollow
+popup: off
+-->
+<section class="thanks-section">
+  <div class="container">
+    <div class="thanks-card" id="thanks-found" hidden>
+      <div class="success-panel" style="padding:0">
+        <div class="tick"><sp-i check></div>
+      </div>
+      <p class="eyebrow eyebrow-plain" style="justify-content:center" data-eyebrow>Request received</p>
+      <h1>Thank You, <span data-first-name></span>!</h1>
+      <p class="lead" style="max-width:520px;margin:0 auto" data-message>Your relocation request has been successfully received. Our team will contact you shortly.</p>
+      <div class="ref-box">
+        <small data-ref-label>Lead Reference Number</small>
+        <strong data-ref></strong>
+        <button type="button" data-copy-ref><sp-i copy><span> Copy</span></button>
+      </div>
+      <div class="details-table" id="thanks-details"></div>
+      <p style="color:var(--muted);font-size:15px">Please keep your reference number handy when you speak with our team.</p>
+      <div class="btn-row" style="justify-content:center;margin-top:24px">
+        <a class="btn btn-primary" href="/">Back to Home <sp-i arrow></a>
+        <a class="btn btn-outline" href="tel:{{site.phone}}"><sp-i phone> {{site.phone_display}}</a>
+      </div>
+    </div>
+    <div class="thanks-card" id="thanks-generic" hidden>
+      <span class="icon-badge" style="margin:0 auto 18px"><sp-i clipboard></span>
+      <h2 class="h2">Looking for a moving quote?</h2>
+      <p class="lead" style="max-width:520px;margin:0 auto 26px">We couldn't find a recent request in this browser. Submit your move details and our team will get in touch.</p>
+      <div class="btn-row" style="justify-content:center">
+        <a class="btn btn-primary" href="/consultation">Get Free Consultation <sp-i arrow></a>
+        <a class="btn btn-outline" href="tel:{{site.phone}}"><sp-i phone> Call us</a>
+      </div>
+    </div>
+    <noscript><div class="thanks-card"><h2 class="h2">Thank you!</h2><p>If you submitted a request, our team will contact you shortly.</p></div></noscript>
+  </div>
+</section>
+
+<!--SCRIPTS-->
+<script src="/assets/js/thank-you.js?v={{build.ver}}" defer></script>
+<!--/SCRIPTS-->

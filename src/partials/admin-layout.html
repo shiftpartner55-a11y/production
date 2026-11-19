@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>{{page.title}} | Shiftingpartner Admin</title>
+<link rel="icon" type="image/png" href="/assets/logo/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/css/admin.css?v={{build.ver}}">
+{{page.head}}
+</head>
+<body class="admin" data-admin-page="{{page.body_class}}">
+<div class="admin-boot" id="admin-boot"><div class="boot-spinner"></div><p>Checking access…</p></div>
+<div class="admin-shell" id="admin-shell" hidden>
+  <aside class="admin-side" id="admin-side">
+    <a class="admin-brand" href="/admin/dashboard"><img src="/assets/logo/logo-header-light.png" alt="Shiftingpartner" width="720" height="122"></a>
+    <p class="side-label">Content</p>
+    <nav class="side-nav" aria-label="Admin navigation">
+      <a href="/admin/dashboard" data-nav="dashboard"><sp-i dashboard> Dashboard</a>
+      <a href="/admin/blogs" data-nav="blogs"><sp-i news> All Blogs</a>
+      <a href="/admin/add-blog" data-nav="add"><sp-i plus> Add New Blog</a>
+      <a href="/admin/categories" data-nav="categories"><sp-i tag> Categories &amp; Tags</a>
+    </nav>
+    <p class="side-label">Website</p>
+    <nav class="side-nav">
+      <a href="/" target="_blank" rel="noopener"><sp-i external> View Website</a>
+      <a href="/blog" target="_blank" rel="noopener"><sp-i external> View Blog</a>
+    </nav>
+    <div class="side-user">
+      <span class="side-avatar" id="admin-avatar">A</span>
+      <div><strong id="admin-email">admin</strong><small id="admin-role">Administrator</small></div>
+      <button type="button" class="icon-btn" data-logout title="Log out" aria-label="Log out"><sp-i logout></button>
+    </div>
+  </aside>
+  <div class="admin-main">
+    <header class="admin-top">
+      <button type="button" class="icon-btn side-toggle" aria-label="Toggle menu" data-side-toggle><sp-i menu></button>
+      <div>
+        <p class="top-crumb">Shiftingpartner Admin</p>
+        <h1>{{page.description}}</h1>
+      </div>
+      <div class="top-actions" id="top-actions"></div>
+    </header>
+    <main class="admin-content">
+{{content}}
+    </main>
+  </div>
+</div>
+<div class="side-backdrop" data-side-toggle></div>
+<div class="toasts" id="toasts" aria-live="polite"></div>
+<div class="modal" id="modal" hidden role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-card">
+    <h2 id="modal-title">Are you sure?</h2>
+    <p id="modal-text"></p>
+    <div class="modal-actions"><button type="button" class="abtn abtn-ghost" data-modal-cancel>Cancel</button><button type="button" class="abtn abtn-danger" data-modal-ok>Delete</button></div>
+  </div>
+</div>
+<script src="/assets/js/config.js?v={{build.ver}}"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js" integrity="sha384-GFr3yTh5lJznCbZfpTtXnwboFsxqtTQoeTZCRHhE0579KrRmlCzen5AA8ohaB5ug" crossorigin="anonymous"></script>
+<script src="/assets/js/admin.js?v={{build.ver}}"></script>
+{{page.scripts}}
+</body>
+</html>

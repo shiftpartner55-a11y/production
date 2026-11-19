@@ -1,0 +1,11 @@
+# Generated during build
+src/.generated/
+# Server-side article cache (created on Hostinger)
+public_html/includes/cache/
+# OS / editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+.vscode/
+.idea/

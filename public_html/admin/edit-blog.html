@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Edit Blog | Shiftingpartner Admin</title>
+<link rel="icon" type="image/png" href="/assets/logo/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/css/admin.css?v=202611192214">
+
+</head>
+<body class="admin" data-admin-page="editor">
+<div class="admin-boot" id="admin-boot"><div class="boot-spinner"></div><p>Checking access…</p></div>
+<div class="admin-shell" id="admin-shell" hidden>
+  <aside class="admin-side" id="admin-side">
+    <a class="admin-brand" href="/admin/dashboard"><img src="/assets/logo/logo-header-light.png" alt="Shiftingpartner" width="720" height="122"></a>
+    <p class="side-label">Content</p>
+    <nav class="side-nav" aria-label="Admin navigation">
+      <a href="/admin/dashboard" data-nav="dashboard"><svg class="i" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#dashboard"></use></svg> Dashboard</a>
+      <a href="/admin/blogs" data-nav="blogs" aria-current="page"><svg class="i" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#news"></use></svg> All Blogs</a>
+      <a href="/admin/add-blog" data-nav="add"><svg class="i" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#plus"></use></svg> Add New Blog</a>
+      <a href="/admin/categories" data-nav="categories"><svg class="i" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#tag"></use></svg> Categories &amp; Tags</a>
+    </nav>
+    <p class="side-label">Website</p>
+    <nav class="side-nav">
+      <a href="/" target="_blank" rel="noopener"><svg class="i" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#external"></use></svg> View Website</a>
+      <a href="/blog" target="_blank" rel="noopener"><svg class="i" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#external"></use></svg> View Blog</a>
+    </nav>
+    <div class="side-user">
+      <span class="side-avatar" id="admin-avatar">A</span>
+      <div><strong id="admin-email">admin</strong><small id="admin-role">Administrator</small></div>
+      <button type="button" class="icon-btn" data-logout title="Log out" aria-label="Log out"><svg class="i" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#logout"></use></svg></button>
+    </div>
+  </aside>
+  <div class="admin-main">
+    <header class="admin-top">
+      <button type="button" class="icon-btn side-toggle" aria-label="Toggle menu" data-side-toggle><svg class="i" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#menu"></use></svg></button>
+      <div>
+        <p class="top-crumb">Shiftingpartner Admin</p>
+        <h1>Edit Blog</h1>
+      </div>
+      <div class="top-actions" id="top-actions"></div>
+    </header>
+    <main class="admin-content">
+<div class="toolbar" style="justify-content:flex-end;margin-bottom:12px">
+  <button type="button" class="abtn abtn-ghost abtn-sm" id="btn-delete" style="color:var(--danger)"><svg class="i" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#trash"></use></svg> Delete post</button>
+</div>
+<form id="post-form" novalidate>
+  <div class="editor-grid">
+    <div>
+      <div class="panel">
+        <div class="panel-body">
+          <div class="afield">
+            <label for="title">Blog Title <span class="hint">Becomes the H1 on the page</span></label>
+            <input class="ainput lg" id="title" name="title" type="text" maxlength="200" placeholder="e.g. How to Pack Your Kitchen for a Move" required>
+          </div>
+          <div class="afield">
+            <label for="slug">URL Slug <span class="hint">Lowercase, hyphen-separated</span></label>
+            <div class="slug-row"><span>/blog/</span><input class="ainput" id="slug" name="slug" type="text" maxlength="140" placeholder="how-to-pack-your-kitchen"></div>
+          </div>
+          <div class="afield">
+            <label for="excerpt">Short Description <span class="counter" data-count="excerpt"></span></label>
+            <textarea class="atextarea" id="excerpt" name="excerpt" maxlength="400" placeholder="One or two sentences shown on blog cards and under the title."></textarea>
+          </div>
+          <div class="afield" style="margin-bottom:0">
+            <span class="lbl">Main Content</span>
+            <div class="editor-loading" id="editor-loading">Loading editor…</div>
+            <textarea id="content" name="content" hidden></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head"><h2>SEO Settings</h2><span class="hint" style="font-size:12px;color:var(--muted)">How this article appears in Google</span></div>
+        <div class="panel-body">
+          <div class="afield">
+            <label for="seo_title">SEO Title <span class="counter" data-count="seo_title"></span></label>
+            <input class="ainput" id="seo_title" name="seo_title" type="text" maxlength="70" placeholder="Defaults to the blog title">
+          </div>
+          <div class="afield">
+            <label for="meta_description">Meta Description <span class="counter" data-count="meta_description"></span></label>
+            <textarea class="atextarea" id="meta_description" name="meta_description" maxlength="170" placeholder="A unique 120–160 character summary that encourages clicks."></textarea>
+          </div>
+          <div class="afield">
+            <label for="focus_keyword">Focus Keyword</label>
+            <input class="ainput" id="focus_keyword" name="focus_keyword" type="text" maxlength="80" placeholder="e.g. house shifting in pune">
+          </div>
+          <div class="afield">
+            <label for="canonical_url">Canonical URL <span class="hint">Leave empty to use this article's URL</span></label>
+            <input class="ainput" id="canonical_url" name="canonical_url" type="url" placeholder="https://…">
+          </div>
+          <span class="lbl" style="font-weight:700;font-size:13px;color:var(--navy)">Search preview</span>
+          <div class="serp"><div class="u" id="serp-u"></div><div class="t" id="serp-t"></div><div class="d" id="serp-d"></div></div>
+          <ul class="checks" id="seo-checks"></ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="editor-side">
+      <div class="panel">
+        <div class="panel-head"><h2>Publish</h2><span id="meta-status"></span></div>
+        <div class="panel-body">
+          <div class="publish-meta">
+            <div><span>Last updated</span><strong id="meta-updated">—</strong></div>
+            <div><span>Created</span><strong id="meta-created">—</strong></div>
+          </div>
+          <div class="afield">
+            <label for="published_at">Publication Date <span class="hint">Future date = scheduled</span></label>
+            <input class="ainput" id="published_at" name="published_at" type="datetime-local">
+          </div>
+          <div class="btn-stack">
+            <div class="btn-pair">
+              <button type="button" class="abtn abtn-ghost" id="btn-draft"><svg class="i" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#file"></use></svg> Save Draft</button>
+              <button type="button" class="abtn abtn-ghost" id="btn-preview"><svg class="i" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#eye"></use></svg> Preview</button>
+            </div>
+            <button type="button" class="abtn abtn-primary abtn-block" id="btn-publish"><svg class="i" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#upload"></use></svg> <span>Publish</span></button>
+            <button type="button" class="abtn abtn-ghost abtn-block" id="btn-unpublish" hidden>Unpublish (move to draft)</button>
+            <a class="abtn abtn-ghost abtn-block" id="btn-view" href="#" target="_blank" rel="noopener" hidden><svg class="i" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#external"></use></svg> View live article</a>
+          </div>
+          <p class="hint" style="font-size:12px;color:var(--muted);margin:12px 0 0">Tip: press Ctrl + S to save a draft.</p>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head"><h2>Featured Image</h2><button type="button" class="abtn abtn-ghost abtn-sm" data-url-for="featured_image">Use URL</button></div>
+        <div class="panel-body">
+          <input type="hidden" name="featured_image">
+          <div class="img-preview" id="featured_image-preview" hidden><img src="data:," alt=""><button type="button" class="icon-btn" data-remove aria-label="Remove image"><svg class="i" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#x"></use></svg></button></div>
+          <div class="dropzone" id="featured_image-drop"><input type="file" accept="image/jpeg,image/png,image/webp,image/avif,image/gif" aria-label="Upload featured image"><svg class="i" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#image"></use></svg><p style="margin:0">Click or drop an image (max 5 MB)</p></div>
+          <div class="afield" style="margin:14px 0 0">
+            <label for="image_alt">Image Alt Text</label>
+            <input class="ainput" id="image_alt" name="image_alt" type="text" maxlength="150" placeholder="Describe the image for accessibility & SEO">
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head"><h2>Organise</h2></div>
+        <div class="panel-body">
+          <div class="afield">
+            <label for="category_id">Blog Category <button type="button" class="link-btn" id="quick-cat" style="border:0;background:none;color:var(--orange);font-weight:700;cursor:pointer;font-size:12px">+ New</button></label>
+            <select class="aselect" id="category_id" name="category_id"><option value="">Loading…</option></select>
+          </div>
+          <div class="afield">
+            <label for="tag-entry">Tags <span class="hint">Enter or comma to add</span></label>
+            <div class="tag-input" id="tag-box"><input id="tag-entry" type="text" list="tag-suggestions" maxlength="50" placeholder="Add a tag"></div>
+            <datalist id="tag-suggestions"></datalist>
+          </div>
+          <div class="afield" style="margin:0">
+            <label for="author">Author</label>
+            <input class="ainput" id="author" name="author" type="text" maxlength="80" placeholder="Shiftingpartner Team">
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head"><h2>Open Graph Image</h2><button type="button" class="abtn abtn-ghost abtn-sm" data-url-for="og_image">Use URL</button></div>
+        <div class="panel-body">
+          <p class="hint" style="font-size:12px;color:var(--muted);margin:0 0 10px">Shown when shared on WhatsApp, Facebook &amp; LinkedIn. Defaults to the featured image. Ideal size 1200×630.</p>
+          <input type="hidden" name="og_image">
+          <div class="img-preview" id="og_image-preview" hidden><img src="data:," alt=""><button type="button" class="icon-btn" data-remove aria-label="Remove image"><svg class="i" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#x"></use></svg></button></div>
+          <div class="dropzone" id="og_image-drop"><input type="file" accept="image/jpeg,image/png,image/webp" aria-label="Upload Open Graph image"><svg class="i" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#image"></use></svg><p style="margin:0">Click or drop an image (max 5 MB)</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+    </main>
+  </div>
+</div>
+<div class="side-backdrop" data-side-toggle></div>
+<div class="toasts" id="toasts" aria-live="polite"></div>
+<div class="modal" id="modal" hidden role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-card">
+    <h2 id="modal-title">Are you sure?</h2>
+    <p id="modal-text"></p>
+    <div class="modal-actions"><button type="button" class="abtn abtn-ghost" data-modal-cancel>Cancel</button><button type="button" class="abtn abtn-danger" data-modal-ok>Delete</button></div>
+  </div>
+</div>
+<script src="/assets/js/config.js?v=202611192214"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js" integrity="sha384-GFr3yTh5lJznCbZfpTtXnwboFsxqtTQoeTZCRHhE0579KrRmlCzen5AA8ohaB5ug" crossorigin="anonymous"></script>
+<script src="/assets/js/admin.js?v=202611192214"></script>
+<script src="https://cdn.jsdelivr.net/npm/tinymce@7.3.0/tinymce.min.js" integrity="sha384-SwQRvvbMuxNm8MdKBxD0q87IHYsikSs486bjgG/t6UGVihxV0iJ0c8JlqjZmBRTW" crossorigin="anonymous" referrerpolicy="origin"></script>
+<script src="/assets/js/admin-editor.js?v=202611192214"></script>
+</body>
+</html>

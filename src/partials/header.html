@@ -1,0 +1,61 @@
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="Shiftingpartner home">
+      <img src="/assets/logo/logo-header-light.png" alt="Shiftingpartner" width="720" height="122">
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="/" data-nav="home">Home</a></li>
+        <li><a href="/about" data-nav="about">About Us</a></li>
+        <li class="has-sub">
+          <a href="/#locations" data-nav="cities">Locations <sp-i chevron-down class="i-xs"></a>
+          <ul class="sub-menu">
+            <li><a href="/cities/bengaluru">Bengaluru</a></li>
+            <li><a href="/cities/hyderabad">Hyderabad</a></li>
+            <li><a href="/cities/chennai">Chennai</a></li>
+            <li><a href="/cities/mumbai">Mumbai</a></li>
+            <li><a href="/cities/pune">Pune</a></li>
+            <li><a href="/cities/delhi">Delhi</a></li>
+            <li><a href="/cities/coimbatore">Coimbatore</a></li>
+          </ul>
+        </li>
+        <li><a href="/blog" data-nav="blog">Blog</a></li>
+        <li><a href="/contact" data-nav="contact">Contact Us</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <a class="header-phone" href="tel:{{site.phone}}"><sp-i phone> <span>{{site.phone_display}}</span></a>
+      <a class="btn btn-primary btn-sm" href="/consultation">Get Free Consultation <sp-i arrow></a>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav"><sp-i menu></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-nav" id="mobile-nav" hidden>
+  <div class="mobile-nav-head">
+    <a class="brand" href="/" aria-label="Shiftingpartner home"><img src="/assets/logo/logo-header-light.png" alt="Shiftingpartner" width="720" height="122"></a>
+    <button class="nav-close" type="button" aria-label="Close menu"><sp-i x></button>
+  </div>
+  <nav aria-label="Mobile navigation">
+    <ul class="mobile-links">
+      <li><a href="/" data-nav="home">Home</a></li>
+      <li><a href="/about" data-nav="about">About Us</a></li>
+      <li><a href="/blog" data-nav="blog">Blog</a></li>
+      <li><a href="/contact" data-nav="contact">Contact Us</a></li>
+      <li><a href="/consultation" data-nav="consultation">Get Free Consultation</a></li>
+    </ul>
+    <p class="mobile-label">Service locations</p>
+    <ul class="mobile-cities">
+      <li><a href="/cities/bengaluru">Bengaluru</a></li>
+      <li><a href="/cities/hyderabad">Hyderabad</a></li>
+      <li><a href="/cities/chennai">Chennai</a></li>
+      <li><a href="/cities/mumbai">Mumbai</a></li>
+      <li><a href="/cities/pune">Pune</a></li>
+      <li><a href="/cities/delhi">Delhi</a></li>
+      <li><a href="/cities/coimbatore">Coimbatore</a></li>
+    </ul>
+  </nav>
+  <div class="mobile-nav-foot">
+    <a class="btn btn-primary btn-block" href="/consultation">Get Free Consultation <sp-i arrow></a>
+    <a class="btn btn-ghost-light btn-block" href="tel:{{site.phone}}"><sp-i phone> Call {{site.phone_display}}</a>
+  </div>
+</div>

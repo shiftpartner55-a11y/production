@@ -1,0 +1,72 @@
+<!--
+layout: bare
+title: Admin Login
+-->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Admin Login | Shiftingpartner</title>
+<link rel="icon" type="image/png" href="/assets/logo/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/css/admin.css?v={{build.ver}}">
+</head>
+<body class="admin" data-admin-page="login">
+<div class="auth-page">
+  <div class="auth-visual">
+    <sp-img id="1694715669993-ea0022b470f7" alt="" ratio="4:5" sizes="50vw" class="bg">
+    <img class="logo" src="/assets/logo/logo-header-light.png" alt="Shiftingpartner" width="720" height="122">
+    <div>
+      <h2>Manage your blog, guides and SEO content in one place.</h2>
+      <p>Shiftingpartner Admin Dashboard — authorised team members only.</p>
+    </div>
+  </div>
+  <div class="auth-form">
+    <div class="auth-box">
+      <div class="auth-alert" id="login-alert" hidden role="alert"></div>
+
+      <div id="view-login">
+        <h1>Welcome back</h1>
+        <p>Sign in with your admin email and password.</p>
+        <form id="login-form" novalidate>
+          <div class="afield"><label for="l-email">Email</label><input class="ainput" id="l-email" name="email" type="email" autocomplete="username" required placeholder="you@shiftingpartner.com"></div>
+          <div class="afield">
+            <label for="l-pass">Password <button type="button" class="link-btn" data-view="forgot">Forgot password?</button></label>
+            <div class="pw-wrap"><input class="ainput" id="l-pass" name="password" type="password" autocomplete="current-password" required placeholder="••••••••••"><button type="button" class="icon-btn" data-pw-toggle aria-label="Show password"><sp-i eye></button></div>
+          </div>
+          <button type="submit" class="abtn abtn-primary abtn-block" style="min-height:48px;margin-top:6px">Login</button>
+        </form>
+        <p style="margin-top:24px;font-size:13px;color:var(--muted)"><a href="/" style="color:var(--orange);font-weight:700">← Back to website</a></p>
+      </div>
+
+      <div id="view-forgot" hidden>
+        <h1>Reset password</h1>
+        <p>Enter your admin email and we'll send you a secure reset link.</p>
+        <form id="forgot-form" novalidate>
+          <div class="afield"><label for="f-email">Email</label><input class="ainput" id="f-email" name="email" type="email" autocomplete="username" required></div>
+          <button type="submit" class="abtn abtn-primary abtn-block" style="min-height:48px">Send reset link</button>
+        </form>
+        <p style="margin-top:20px"><button type="button" class="link-btn" data-view="login">← Back to login</button></p>
+      </div>
+
+      <div id="view-reset" hidden>
+        <h1>Choose a new password</h1>
+        <p>Use at least 10 characters.</p>
+        <form id="reset-form" novalidate>
+          <div class="afield"><label for="r-pass">New password</label><input class="ainput" id="r-pass" name="password" type="password" autocomplete="new-password" minlength="10" required></div>
+          <div class="afield"><label for="r-pass2">Confirm password</label><input class="ainput" id="r-pass2" name="password2" type="password" autocomplete="new-password" minlength="10" required></div>
+          <button type="submit" class="abtn abtn-primary abtn-block" style="min-height:48px">Update password</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="/assets/js/config.js?v={{build.ver}}"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js" integrity="sha384-GFr3yTh5lJznCbZfpTtXnwboFsxqtTQoeTZCRHhE0579KrRmlCzen5AA8ohaB5ug" crossorigin="anonymous"></script>
+<script src="/assets/js/admin.js?v={{build.ver}}"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Dashboard | Shiftingpartner Admin</title>
+<link rel="icon" type="image/png" href="/assets/logo/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/css/admin.css?v=202611192214">
+
+</head>
+<body class="admin" data-admin-page="dashboard">
+<div class="admin-boot" id="admin-boot"><div class="boot-spinner"></div><p>Checking access…</p></div>
+<div class="admin-shell" id="admin-shell" hidden>
+  <aside class="admin-side" id="admin-side">
+    <a class="admin-brand" href="/admin/dashboard"><img src="/assets/logo/logo-header-light.png" alt="Shiftingpartner" width="720" height="122"></a>
+    <p class="side-label">Content</p>
+    <nav class="side-nav" aria-label="Admin navigation">
+      <a href="/admin/dashboard" data-nav="dashboard" aria-current="page"><svg class="i" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#dashboard"></use></svg> Dashboard</a>
+      <a href="/admin/blogs" data-nav="blogs"><svg class="i" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#news"></use></svg> All Blogs</a>
+      <a href="/admin/add-blog" data-nav="add"><svg class="i" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#plus"></use></svg> Add New Blog</a>
+      <a href="/admin/categories" data-nav="categories"><svg class="i" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#tag"></use></svg> Categories &amp; Tags</a>
+    </nav>
+    <p class="side-label">Website</p>
+    <nav class="side-nav">
+      <a href="/" target="_blank" rel="noopener"><svg class="i" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#external"></use></svg> View Website</a>
+      <a href="/blog" target="_blank" rel="noopener"><svg class="i" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#external"></use></svg> View Blog</a>
+    </nav>
+    <div class="side-user">
+      <span class="side-avatar" id="admin-avatar">A</span>
+      <div><strong id="admin-email">admin</strong><small id="admin-role">Administrator</small></div>
+      <button type="button" class="icon-btn" data-logout title="Log out" aria-label="Log out"><svg class="i" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#logout"></use></svg></button>
+    </div>
+  </aside>
+  <div class="admin-main">
+    <header class="admin-top">
+      <button type="button" class="icon-btn side-toggle" aria-label="Toggle menu" data-side-toggle><svg class="i" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#menu"></use></svg></button>
+      <div>
+        <p class="top-crumb">Shiftingpartner Admin</p>
+        <h1>Dashboard</h1>
+      </div>
+      <div class="top-actions" id="top-actions"></div>
+    </header>
+    <main class="admin-content">
+<div class="stats">
+  <div class="stat green"><span class="ico"><svg class="i" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#check-circle"></use></svg></span><div><strong id="stat-published">–</strong><span>Published Blogs</span></div></div>
+  <div class="stat"><span class="ico"><svg class="i" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#file"></use></svg></span><div><strong id="stat-draft">–</strong><span>Draft Blogs</span></div></div>
+  <div class="stat blue"><span class="ico"><svg class="i" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#calendar"></use></svg></span><div><strong id="stat-scheduled">–</strong><span>Scheduled</span></div></div>
+  <div class="stat navy"><span class="ico"><svg class="i" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#folder"></use></svg></span><div><strong id="stat-categories">–</strong><span>Categories</span></div></div>
+</div>
+<div class="dash-grid">
+  <div class="panel">
+    <div class="panel-head"><h2>Recent Blog Updates</h2><a class="abtn abtn-ghost abtn-sm" href="/admin/blogs">View all</a></div>
+    <div class="table-wrap">
+      <table class="atable">
+        <thead><tr><th>Title</th><th>Status</th><th class="hide-sm">Updated</th><th></th></tr></thead>
+        <tbody id="recent-posts"><tr><td colspan="4"><div class="empty">Loading…</div></td></tr></tbody>
+      </table>
+    </div>
+  </div>
+  <div>
+    <div class="panel">
+      <div class="panel-head"><h2>Quick Actions</h2></div>
+      <div class="panel-body btn-stack">
+        <a class="abtn abtn-primary abtn-block" href="/admin/add-blog"><svg class="i" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#plus"></use></svg> Write a New Blog</a>
+        <a class="abtn abtn-ghost abtn-block" href="/admin/categories"><svg class="i" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#tag"></use></svg> Manage Categories &amp; Tags</a>
+        <a class="abtn abtn-ghost abtn-block" href="/blog" target="_blank" rel="noopener"><svg class="i" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#external"></use></svg> Open Public Blog</a>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-head"><h2>Content Overview</h2></div>
+      <div class="panel-body">
+        <div class="publish-meta" style="margin:0">
+          <div><span>Total posts</span><strong id="stat-total">–</strong></div>
+          <div><span>Tags</span><strong id="stat-tags">–</strong></div>
+        </div>
+      </div>
+    </div>
+    <div class="notice" style="margin-top:20px"><svg class="i" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#lock"></use></svg><div>Website leads (consultation &amp; contact forms) are delivered to your <strong>Google Sheet</strong>, not stored in this dashboard.</div></div>
+  </div>
+</div>
+    </main>
+  </div>
+</div>
+<div class="side-backdrop" data-side-toggle></div>
+<div class="toasts" id="toasts" aria-live="polite"></div>
+<div class="modal" id="modal" hidden role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-card">
+    <h2 id="modal-title">Are you sure?</h2>
+    <p id="modal-text"></p>
+    <div class="modal-actions"><button type="button" class="abtn abtn-ghost" data-modal-cancel>Cancel</button><button type="button" class="abtn abtn-danger" data-modal-ok>Delete</button></div>
+  </div>
+</div>
+<script src="/assets/js/config.js?v=202611192214"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js" integrity="sha384-GFr3yTh5lJznCbZfpTtXnwboFsxqtTQoeTZCRHhE0579KrRmlCzen5AA8ohaB5ug" crossorigin="anonymous"></script>
+<script src="/assets/js/admin.js?v=202611192214"></script>
+
+</body>
+</html>

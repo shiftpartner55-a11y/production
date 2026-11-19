@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /thank-you
+Disallow: /blog-details
+Disallow: /includes/
+
+Sitemap: https://shiftingpartner.com/sitemap.xml
+Sitemap: https://shiftingpartner.com/blog-sitemap.xml

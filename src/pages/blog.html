@@ -1,0 +1,69 @@
+<!--
+title: Moving Tips, Packing & City Guides | Shiftingpartner Blog
+description: Practical moving tips, packing guides and city guides from Shiftingpartner to help you plan a smooth, stress-free household shift in India.
+path: blog
+nav: blog
+priority: 0.8
+crumbs: Home|/ > Blog
+-->
+<!--HEAD-->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Blog","name":"Shiftingpartner Blog","url":"{{site.url}}/blog","description":"Moving tips, packing guides and household relocation insights.","publisher":{"@id":"{{site.url}}/#organization"},"inLanguage":"en-IN"}</script>
+<!--/HEAD-->
+
+<section class="page-hero page-hero-short" aria-labelledby="page-title">
+  <div class="page-hero-media">
+    <sp-img id="1700165644892-3dd6b67b25bc" alt="Open cardboard moving boxes ready for packing" ratio="16:9" sizes="(min-width: 900px) 62vw, 100vw" eager>
+  </div>
+  <div class="container">
+    {{breadcrumb}}
+    <p class="eyebrow eyebrow-light">Shiftingpartner blog</p>
+    <h1 id="page-title">Our Blog</h1>
+    <p class="lead">Helpful tips, moving guides and home relocation insights to plan your move with confidence.</p>
+    <form class="hero-search" id="hero-search" role="search">
+      <sp-i search>
+      <label for="hero-q" class="visually-hidden">Search articles</label>
+      <input class="input" id="hero-q" type="search" placeholder="Search articles, tips &amp; guides…" data-blog-search maxlength="80" autocomplete="off">
+      <button class="btn btn-primary" type="submit">Search</button>
+    </form>
+  </div>
+</section>
+
+<section class="section-sm" id="articles" aria-label="Articles">
+  <div class="container">
+    <div class="blog-toolbar">
+      <div class="chips" id="category-chips" role="group" aria-label="Filter by category">
+        <span class="skeleton" style="width:110px;height:40px;border-radius:999px"></span>
+        <span class="skeleton" style="width:120px;height:40px;border-radius:999px"></span>
+        <span class="skeleton" style="width:130px;height:40px;border-radius:999px"></span>
+      </div>
+      <p id="results-count" class="note" aria-live="polite" style="margin:0"></p>
+    </div>
+    <article class="post-featured" id="post-featured" hidden></article>
+    <div class="posts-grid" id="posts-grid" aria-live="polite">
+      <div class="skeleton sk-card"></div><div class="skeleton sk-card"></div><div class="skeleton sk-card"></div>
+    </div>
+    <nav class="pagination" id="pagination" aria-label="Blog pagination"></nav>
+    <noscript><p class="state-box">Please enable JavaScript to browse our articles, or visit the <a href="/blog-sitemap.xml">article index</a>.</p></noscript>
+  </div>
+</section>
+
+<section class="section-sm section-white" aria-labelledby="topics-title">
+  <div class="container">
+    <div class="section-head center" style="margin-bottom:32px">
+      <p class="eyebrow">Explore by topic</p>
+      <h2 id="topics-title" class="h3" style="font-size:1.7rem">Guides for every stage of your move</h2>
+    </div>
+    <div class="services-grid">
+      <a class="service-card" href="/blog?category=moving-tips"><span class="icon-badge"><sp-i truck></span><h3>Moving Tips</h3><p>Plan timelines, prepare your home and avoid common moving-day mistakes.</p></a>
+      <a class="service-card" href="/blog?category=packing-guides"><span class="icon-badge"><sp-i box></span><h3>Packing Guides</h3><p>Room-by-room packing advice for furniture, kitchenware and fragile items.</p></a>
+      <a class="service-card" href="/blog?category=city-guides"><span class="icon-badge"><sp-i pin></span><h3>City Guides</h3><p>Local insights for moving within and between our seven service cities.</p></a>
+    </div>
+  </div>
+</section>
+
+<!--@include cta-->
+
+<!--SCRIPTS-->
+<script src="/assets/js/supabase.js?v={{build.ver}}" defer></script>
+<script src="/assets/js/blog.js?v={{build.ver}}" defer></script>
+<!--/SCRIPTS-->

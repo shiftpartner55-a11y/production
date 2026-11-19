@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /thank-you
+Disallow: /blog-details
+Disallow: /includes/
+
+Sitemap: {{site.url}}/sitemap.xml
+Sitemap: {{site.url}}/blog-sitemap.xml

@@ -1,0 +1,114 @@
+<!--
+title: {{city.title}}
+description: {{city.description}}
+path: cities/{{city.slug}}
+nav: cities
+priority: 0.8
+crumbs: Home|/ > Locations|/#locations > {{city.name}}
+-->
+<!--HEAD-->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Household shifting in {{city.name}}","serviceType":"Household relocation","provider":{"@id":"{{site.url}}/#organization"},"areaServed":{"@type":"City","name":"{{city.name}}","containedInPlace":{"@type":"AdministrativeArea","name":"{{city.state}}"}},"url":"{{site.url}}/cities/{{city.slug}}"}</script>
+{{city.faq_ld}}
+<!--/HEAD-->
+
+<section class="page-hero" aria-labelledby="page-title" style="padding-bottom:110px">
+  <div class="page-hero-media">
+    <sp-img id="{{city.img}}" alt="{{city.img_alt}}" ratio="4:3" sizes="(min-width: 900px) 62vw, 100vw" eager>
+  </div>
+  <div class="container">
+    {{breadcrumb}}
+    <p class="eyebrow eyebrow-light">{{city.name}}, {{city.state}}</p>
+    <h1 id="page-title">Household Shifting Services in {{city.name}}</h1>
+    <p class="lead">{{city.lead}}</p>
+    <div class="btn-row">
+      <a class="btn btn-primary btn-lg" href="/consultation?from={{city.name}}">Get Free Consultation <sp-i arrow></a>
+      <a class="btn btn-ghost-light btn-lg" href="tel:{{site.phone}}"><sp-i phone> Talk to Our Expert</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="intro-title">
+  <div class="container split">
+    <div class="reveal">
+      <p class="eyebrow">Local &amp; intercity moves</p>
+      <h2 id="intro-title" class="h2">{{city.intro_title}}</h2>
+      {{city.intro_html}}
+      <ul class="check-list check-cols">
+        <li><sp-i check><div>Local house shifting</div></li>
+        <li><sp-i check><div>Intercity relocation</div></li>
+        <li><sp-i check><div>Professional packing</div></li>
+        <li><sp-i check><div>Loading &amp; unloading</div></li>
+        <li><sp-i check><div>Transportation</div></li>
+        <li><sp-i check><div>Unpacking assistance*</div></li>
+      </ul>
+      <p class="note">*Where included in your booking. Service availability is confirmed based on the pickup and delivery locations.</p>
+    </div>
+    <div class="reveal reveal-d1">
+      <div class="side-card dark" style="padding:36px">
+        <p class="eyebrow eyebrow-light">Free consultation</p>
+        <h3 style="font-size:1.5rem">Get a quote for your {{city.name}} move</h3>
+        <p>Tell us where you're moving from and to, your move type and lift availability. Our team will call you with a clear quotation.</p>
+        <ol class="next-steps" style="margin:22px 0 28px">
+          <li><b>1</b><div><strong style="color:#fff">Share your move details</strong><span style="color:#A9B4C2">Takes less than a minute.</span></div></li>
+          <li><b>2</b><div><strong style="color:#fff">We confirm availability</strong><span style="color:#A9B4C2">For your exact locality or route.</span></div></li>
+          <li><b>3</b><div><strong style="color:#fff">Review your quotation</strong><span style="color:#A9B4C2">Inclusions explained before you book.</span></div></li>
+        </ol>
+        <a class="btn btn-primary btn-block" href="/consultation?from={{city.name}}">Start My {{city.name}} Move <sp-i arrow></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-white" aria-labelledby="plan-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Moving in {{city.name}}</p>
+      <h2 id="plan-title" class="h2">What to plan for in {{city.name}}</h2>
+      <p>Local factors that shape how we plan and pack your {{city.name}} move.</p>
+    </div>
+    <div class="city-facts">{{city.considerations_html}}</div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="areas-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Areas we commonly serve</p>
+      <h2 id="areas-title" class="h2">House shifting across {{city.name}}</h2>
+      <p>We regularly plan moves to and from neighbourhoods such as these. Coverage for your exact locality is confirmed when you share your addresses.</p>
+    </div>
+    <ul class="locality-list">{{city.localities_html}}</ul>
+  </div>
+</section>
+
+<section class="section section-dark" aria-labelledby="routes-title">
+  <div class="container split">
+    <div>
+      <p class="eyebrow eyebrow-light">Intercity relocation</p>
+      <h2 id="routes-title" class="h2">Moving from {{city.name}} to another city?</h2>
+      <p>We coordinate household relocation between {{city.name}} and our supported cities — packing, loading, long-distance transportation and delivery planned together.</p>
+      <p class="note" style="color:#A9B4C2">Route availability is confirmed for each move.</p>
+    </div>
+    <div class="route-list">{{city.routes_html}}</div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="cfaq-title">
+  <div class="container faq-layout">
+    <div class="faq-aside">
+      <p class="eyebrow">{{city.name}} FAQs</p>
+      <h2 id="cfaq-title" class="h2">Questions about moving in {{city.name}}</h2>
+      <p class="lead">More answers on our <a class="text-orange" href="/#faq-title" style="font-weight:700">main FAQ</a>, or <a class="text-orange" href="/contact" style="font-weight:700">contact our team</a>.</p>
+    </div>
+    <div class="faq-list">{{city.faqs_html}}</div>
+  </div>
+</section>
+
+<section class="section-sm section-white" aria-labelledby="other-title">
+  <div class="container">
+    <h2 id="other-title" class="h3" style="font-size:1.4rem">Other service locations</h2>
+    <ul class="locality-list">{{city.others_html}}</ul>
+  </div>
+</section>
+
+<!--@include cta-->

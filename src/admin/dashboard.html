@@ -1,0 +1,44 @@
+<!--
+title: Dashboard
+description: Dashboard
+path: admin/dashboard
+nav: dashboard
+body_class: dashboard
+-->
+<div class="stats">
+  <div class="stat green"><span class="ico"><sp-i check-circle></span><div><strong id="stat-published">–</strong><span>Published Blogs</span></div></div>
+  <div class="stat"><span class="ico"><sp-i file></span><div><strong id="stat-draft">–</strong><span>Draft Blogs</span></div></div>
+  <div class="stat blue"><span class="ico"><sp-i calendar></span><div><strong id="stat-scheduled">–</strong><span>Scheduled</span></div></div>
+  <div class="stat navy"><span class="ico"><sp-i folder></span><div><strong id="stat-categories">–</strong><span>Categories</span></div></div>
+</div>
+<div class="dash-grid">
+  <div class="panel">
+    <div class="panel-head"><h2>Recent Blog Updates</h2><a class="abtn abtn-ghost abtn-sm" href="/admin/blogs">View all</a></div>
+    <div class="table-wrap">
+      <table class="atable">
+        <thead><tr><th>Title</th><th>Status</th><th class="hide-sm">Updated</th><th></th></tr></thead>
+        <tbody id="recent-posts"><tr><td colspan="4"><div class="empty">Loading…</div></td></tr></tbody>
+      </table>
+    </div>
+  </div>
+  <div>
+    <div class="panel">
+      <div class="panel-head"><h2>Quick Actions</h2></div>
+      <div class="panel-body btn-stack">
+        <a class="abtn abtn-primary abtn-block" href="/admin/add-blog"><sp-i plus> Write a New Blog</a>
+        <a class="abtn abtn-ghost abtn-block" href="/admin/categories"><sp-i tag> Manage Categories &amp; Tags</a>
+        <a class="abtn abtn-ghost abtn-block" href="/blog" target="_blank" rel="noopener"><sp-i external> Open Public Blog</a>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-head"><h2>Content Overview</h2></div>
+      <div class="panel-body">
+        <div class="publish-meta" style="margin:0">
+          <div><span>Total posts</span><strong id="stat-total">–</strong></div>
+          <div><span>Tags</span><strong id="stat-tags">–</strong></div>
+        </div>
+      </div>
+    </div>
+    <div class="notice" style="margin-top:20px"><sp-i lock><div>Website leads (consultation &amp; contact forms) are delivered to your <strong>Google Sheet</strong>, not stored in this dashboard.</div></div>
+  </div>
+</div>
