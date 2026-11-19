@@ -212,3 +212,24 @@ In GTM, create a **Custom Event** trigger with event name `generate_lead` and at
 **Footer credit:** "Developed by Howlers · Powered by Brand Making Tractor" (`src/partials/footer.html`).
 
 **Security in this release:** HTTPS and www redirects, security headers (HSTS, nosniff, frame protection, referrer and permissions policy, a baseline Content-Security-Policy), server signature hidden, Subresource Integrity on all CDN scripts, `/includes/` blocked, admin pages `noindex` and `no-store`, Supabase Row Level Security, and lead spam protection in Apps Script.
+
+---
+
+## 11. GitHub branches and deploying to Hostinger
+
+Hostinger deploys the **root of the `main` branch** straight into `public_html`, so:
+
+| Branch | Contains | Used for |
+|---|---|---|
+| `main` | Only the built website (the contents of `public_html/`) | Hostinger deploys this |
+| `source` | The full project: `src/`, `tools/`, `supabase/`, `google-apps-script/`, this README | Editing and building |
+
+**To publish a change:** edit files in `src/` on the `source` branch, then run:
+
+```bash
+powershell -ExecutionPolicy Bypass -File tools/publish.ps1 "What changed"
+```
+
+This builds the site, pushes `source`, updates `main` with the new `public_html/` contents, and then you click **Redeploy** in Hostinger.
+
+**Never** point Hostinger at the `source` branch: it would make the source code and this guide publicly downloadable.
