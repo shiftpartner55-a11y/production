@@ -679,3 +679,4 @@ body.popup-open { overflow: hidden; }
 .hero-split .hero-stats { max-width: none; gap: 30px; }
 .hero-split .hero-stat strong { font-size: 1.35rem; white-space: nowrap; }
 .hero-split .hero-stat span { white-space: nowrap; }
+.media-frame img.pos-truck { aspect-ratio: 4 / 5; object-fit: cover; object-position: 4% center; }
