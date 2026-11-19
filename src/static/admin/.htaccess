@@ -1,6 +1,0 @@
-# Admin area: never indexed, never cached by proxies. Access is enforced by Supabase Auth + RLS.
-<IfModule mod_headers.c>
-  Header always set X-Robots-Tag "noindex, nofollow"
-  Header always set Cache-Control "no-store"
-  Header always set X-Frame-Options "DENY"
-</IfModule>
