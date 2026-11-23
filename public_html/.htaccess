@@ -57,7 +57,8 @@ ServerSignature Off
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
   Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
   Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains" env=HTTPS
-  Header always set Cross-Origin-Opener-Policy "same-origin-allow-popups"
+  # COOP left at unsafe-none: a stricter value severs window.opener and breaks GTM Tag Assistant (Preview) connection.
+  Header always set Cross-Origin-Opener-Policy "unsafe-none"
   Header always set X-Permitted-Cross-Domain-Policies "none"
   # Safe baseline CSP: blocks plugins, clickjacking, <base> hijacking and mixed content without
   # restricting the scripts Google Tag Manager needs to load.
